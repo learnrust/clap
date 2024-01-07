@@ -1,0 +1,454 @@
+cargo build --features="derive" --features="cargo"  --example cargo-example-derive && target/debug/examples/cargo-example-derive   -h
+Usage: cargo <COMMAND>
+
+Commands:
+  example-derive  A simple to use, efficient, and full-featured Command Line Argument Parser
+  help            Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+cargo build --features="derive" --features="cargo"  --example demo && target/debug/examples/demo        -h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: demo [OPTIONS] --name <NAME>
+
+Options:
+  -n, --name <NAME>    Name of the person to greet
+  -c, --count <COUNT>  Number of times to greet [default: 1]
+  -h, --help           Print help
+  -V, --version        Print version
+cargo build --features="derive" --features="cargo"  --example find && target/debug/examples/find        
+[]
+cargo build --features="derive" --features="cargo"  --example pacman && target/debug/examples/pacman -h
+package manager utility
+
+Usage: pacman <COMMAND>
+
+Commands:
+  query, -Q, --query  Query the package database.
+  sync, -S, --sync    Synchronize packages.
+  help                Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example typed-derive && ls -l target/debug/examples/typed-derive 
+-rwxr-xr-x 2 me me 20486224 Jan  7 12:10 target/debug/examples/typed-derive
+cargo build --features="derive" --features="cargo"  --example escaped-positional-derive && ls -l target/debug/examples/escaped-positional-derive 
+-rwxr-xr-x 2 me me 19156672 Jan  7 12:10 target/debug/examples/escaped-positional-derive
+cargo build --features="derive" --features="cargo"  --example escaped-positional && target/debug/examples/escaped-positional 
+-f used: false
+-p's value: None
+'slops' values: []
+cargo build --features="derive" --features="cargo"  --example git-derive			    && target/debug/examples/git-derive		   	  help
+A fictional versioning CLI
+
+Usage: git-derive <COMMAND>
+
+Commands:
+  clone  Clones repos
+  diff   Compare two commits
+  push   pushes things
+  add    adds things
+  stash  
+  help   Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+cargo build --features="derive" --features="cargo"  --example typed-derive		&& target/debug/examples/typed-derive		      
+Args { optimization: None, include: None, bind: None, sleep: None, defines: [], port: 22, log_level: Info }
+cargo build --features="derive" --features="cargo"  --example busybox			&& target/debug/examples/busybox help			      
+Usage: busybox [OPTIONS] [APPLET]
+
+APPLETS:
+  true   does nothing successfully
+  false  does nothing unsuccessfully
+  help   Print this message or the help of the given subcommand(s)
+
+Options:
+      --install <install>  Install hardlinks for all subcommands in path
+  -h, --help               Print help
+cargo build --features="derive" --features="cargo"  --example 01_quick			&& target/debug/examples/01_quick			      
+Debug mode is off
+cargo build --features="derive" --features="cargo"  --example 02_apps			&& target/debug/examples/02_apps	--two 2 --one 1		      
+two: "2"
+one: "1"
+cargo build --features="derive" --features="cargo"  --example 02_crate			&& target/debug/examples/02_crate	 --two 2 --one 1		      
+two: "2"
+one: "1"
+cargo build --features="derive" --features="cargo"  --example 02_app_settings		&& target/debug/examples/02_app_settings	 --two 2 --one 1 	
+two: "2"
+one: "1"
+cargo build --features="derive" --features="cargo"  --example 03_01_flag_bool		&& target/debug/examples/03_01_flag_bool		      
+verbose: false
+cargo build --features="derive" --features="cargo"  --example 03_01_flag_count		&& target/debug/examples/03_01_flag_count		      
+verbose: 0
+cargo build --features="derive" --features="cargo"  --example 03_02_option		&& target/debug/examples/03_02_option		      
+name: None
+cargo build --features="derive" --features="cargo"  --example 03_02_option_mult		&& target/debug/examples/03_02_option_mult	   	   
+name: None
+cargo build --features="derive" --features="cargo"  --example 03_03_positional		&& target/debug/examples/03_03_positional		      
+name: None
+cargo build --features="derive" --features="cargo"  --example 03_03_positional_mult	&& target/debug/examples/03_03_positional_mult	      
+names: []
+cargo build --features="derive" --features="cargo"  --example 03_04_subcommands		&& target/debug/examples/03_04_subcommands	   	   -h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_04_subcommands <COMMAND>
+
+Commands:
+  add   Adds files to myapp
+  help  Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 03_05_default_values	&& target/debug/examples/03_05_default_values	      
+port: 2020
+cargo build --features="derive" --features="cargo"  --example 04_01_possible		&& target/debug/examples/04_01_possible		      -h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_01_possible <MODE>
+
+Arguments:
+  <MODE>  What mode to run the program in [possible values: fast, slow]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_01_enum			    && target/debug/examples/04_01_enum		   	-h    
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_01_enum <MODE>
+
+Arguments:
+  <MODE>  What mode to run the program in [possible values: fast, slow]
+
+Options:
+  -h, --help     Print help (see more with '--help')
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_02_parse			    && target/debug/examples/04_02_parse		   	-h    
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_02_parse <PORT>
+
+Arguments:
+  <PORT>  Network port to use
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_02_validate		&& target/debug/examples/04_02_validate		      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_02_validate <PORT>
+
+Arguments:
+  <PORT>  Network port to use
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_03_relations		&& target/debug/examples/04_03_relations		      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_03_relations [OPTIONS] <--set-ver <VER>|--major|--minor|--patch> [INPUT_FILE]
+
+Arguments:
+  [INPUT_FILE]  some regular input
+
+Options:
+      --set-ver <VER>      set version manually
+      --major              auto inc major
+      --minor              auto inc minor
+      --patch              auto inc patch
+      --spec-in <SPEC_IN>  some special input argument
+  -c <CONFIG>              
+  -h, --help               Print help
+  -V, --version            Print version
+cargo build --features="derive" --features="cargo"  --example 04_04_custom		&& target/debug/examples/04_04_custom		      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_04_custom [OPTIONS] [INPUT_FILE]
+
+Arguments:
+  [INPUT_FILE]  some regular input
+
+Options:
+      --set-ver <VER>      set version manually
+      --major              auto inc major
+      --minor              auto inc minor
+      --patch              auto inc patch
+      --spec-in <SPEC_IN>  some special input argument
+  -c <CONFIG>              
+  -h, --help               Print help
+  -V, --version            Print version
+cargo build --features="derive" --features="cargo"  --example 05_01_assert		&& target/debug/examples/05_01_assert		      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 05_01_assert <PORT>
+
+Arguments:
+  <PORT>  Network port to use
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 01_quick_derive		&& target/debug/examples/01_quick_derive		      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 01_quick_derive [OPTIONS] [NAME] [COMMAND]
+
+Commands:
+  test  does testing things
+  help  Print this message or the help of the given subcommand(s)
+
+Arguments:
+  [NAME]  Optional name to operate on
+
+Options:
+  -c, --config <FILE>  Sets a custom config file
+  -d, --debug...       Turn debugging information on
+  -h, --help           Print help
+  -V, --version        Print version
+cargo build --features="derive" --features="cargo"  --example 02_apps_derive		&& target/debug/examples/02_apps_derive		      	-h 
+Does awesome things
+
+Usage: 02_apps_derive --two <TWO> --one <ONE>
+
+Options:
+      --two <TWO>  
+      --one <ONE>  
+  -h, --help       Print help
+  -V, --version    Print version
+cargo build --features="derive" --features="cargo"  --example 02_crate_derive		&& target/debug/examples/02_crate_derive		      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 02_crate_derive --two <TWO> --one <ONE>
+
+Options:
+      --two <TWO>  
+      --one <ONE>  
+  -h, --help       Print help
+  -V, --version    Print version
+cargo build --features="derive" --features="cargo"  --example 02_app_settings_derive	&& target/debug/examples/02_app_settings_derive	      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 02_app_settings_derive --two <TWO> --one <ONE>
+
+Options:
+      --two <TWO>
+          
+      --one <ONE>
+          
+  -h, --help
+          Print help
+  -V, --version
+          Print version
+cargo build --features="derive" --features="cargo"  --example 03_01_flag_bool_derive	&& target/debug/examples/03_01_flag_bool_derive	      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_01_flag_bool_derive [OPTIONS]
+
+Options:
+  -v, --verbose  
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 03_01_flag_count_derive	&& target/debug/examples/03_01_flag_count_derive	      	-h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_01_flag_count_derive [OPTIONS]
+
+Options:
+  -v, --verbose...  
+  -h, --help        Print help
+  -V, --version     Print version
+cargo build --features="derive" --features="cargo"  --example 03_02_option_derive		    && target/debug/examples/03_02_option_derive	   	-h    
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_02_option_derive [OPTIONS]
+
+Options:
+  -n, --name <NAME>  
+  -h, --help         Print help
+  -V, --version      Print version
+cargo build --features="derive" --features="cargo"  --example 03_02_option_mult_derive		    && target/debug/examples/03_02_option_mult_derive      -h	      
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_02_option_mult_derive [OPTIONS]
+
+Options:
+  -n, --name <NAME>  
+  -h, --help         Print help
+  -V, --version      Print version
+cargo build --features="derive" --features="cargo"  --example 03_03_positional_derive		    && target/debug/examples/03_03_positional_derive	-h      
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_03_positional_derive [NAME]
+
+Arguments:
+  [NAME]  
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 03_03_positional_mult_derive	    && target/debug/examples/03_03_positional_mult_derive  -h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_03_positional_mult_derive [NAME]...
+
+Arguments:
+  [NAME]...  
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 03_04_subcommands_derive		    && target/debug/examples/03_04_subcommands_derive	-h      
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_04_subcommands_derive <COMMAND>
+
+Commands:
+  add   Adds files to myapp
+  help  Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 03_04_subcommands_alt_derive	    && target/debug/examples/03_04_subcommands_alt_derive  -h 
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_04_subcommands_alt_derive <COMMAND>
+
+Commands:
+  add   Adds files to myapp
+  help  Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 03_05_default_values_derive	    && target/debug/examples/03_05_default_values_derive    	-h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 03_05_default_values_derive [PORT]
+
+Arguments:
+  [PORT]  [default: 2020]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_01_enum_derive		    && target/debug/examples/04_01_enum_derive	   	   	-h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_01_enum_derive <MODE>
+
+Arguments:
+  <MODE>  What mode to run the program in [possible values: fast, slow]
+
+Options:
+  -h, --help     Print help (see more with '--help')
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_02_parse_derive		    && target/debug/examples/04_02_parse_derive	   	   	-h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_02_parse_derive <PORT>
+
+Arguments:
+  <PORT>  Network port to use
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_02_validate_derive		    && target/debug/examples/04_02_validate_derive	      	-h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_02_validate_derive <PORT>
+
+Arguments:
+  <PORT>  Network port to use
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example 04_03_relations_derive		    && target/debug/examples/04_03_relations_derive	-h      
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_03_relations_derive [OPTIONS] <--set-ver <VER>|--major|--minor|--patch> [INPUT_FILE]
+
+Arguments:
+  [INPUT_FILE]  some regular input
+
+Options:
+      --set-ver <VER>      set version manually
+      --major              auto inc major
+      --minor              auto inc minor
+      --patch              auto inc patch
+      --spec-in <SPEC_IN>  some special input argument
+  -c <CONFIG>              
+  -h, --help               Print help
+  -V, --version            Print version
+cargo build --features="derive" --features="cargo"  --example 04_04_custom_derive		    && target/debug/examples/04_04_custom_derive	   	   	-h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 04_04_custom_derive [OPTIONS] [INPUT_FILE]
+
+Arguments:
+  [INPUT_FILE]  some regular input
+
+Options:
+      --set-ver <VER>      set version manually
+      --major              auto inc major
+      --minor              auto inc minor
+      --patch              auto inc patch
+      --spec-in <SPEC_IN>  some special input argument
+  -c <CONFIG>              
+  -h, --help               Print help
+  -V, --version            Print version
+cargo build --features="derive" --features="cargo"  --example 05_01_assert_derive		    && target/debug/examples/05_01_assert_derive	   	   	-h
+A simple to use, efficient, and full-featured Command Line Argument Parser
+
+Usage: 05_01_assert_derive <PORT>
+
+Arguments:
+  <PORT>  Network port to use
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+cargo build --features="derive" --features="cargo"  --example interop_augment_args		    && target/debug/examples/interop_augment_args	      	-h
+Usage: interop_augment_args [OPTIONS]
+
+Options:
+  -b, --built    
+  -d, --derived  
+  -h, --help     Print help
+cargo build --features="derive" --features="cargo"  --example interop_augment_subcommands	    && target/debug/examples/interop_augment_subcommands    	-h
+Usage: interop_augment_subcommands [COMMAND]
+
+Commands:
+  derived  
+  help     Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+cargo build --features="derive" --features="cargo"  --example interop_hand_subcommand		    && target/debug/examples/interop_hand_subcommand	-h      
+Usage: interop_hand_subcommand [OPTIONS] <COMMAND>
+
+Commands:
+  add     
+  remove  
+  help    Print this message or the help of the given subcommand(s)
+
+Options:
+  -t, --top-level  
+  -h, --help       Print help
+cargo build --features="derive" --features="cargo"  --example interop_flatten_hand_args   	    && target/debug/examples/interop_flatten_hand_args     -h 
+Usage: interop_flatten_hand_args [OPTIONS]
+
+Options:
+  -t, --top-level    
+  -f, --foo          
+  -b, --bar          
+  -q, --quuz <quuz>  
+  -h, --help         Print help
