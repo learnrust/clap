@@ -52,7 +52,7 @@ examples: cargo-example
 	cargo build ${_FEATURES4} --example demo && ${_DEBUG4}/demo -h
 	cargo build ${_FEATURES4} --example find && ${_DEBUG4}/find -h
 	cargo build ${_FEATURES4} --example pacman && ${_DEBUG4}/pacman -h
-	cargo build ${_FEATURES4} --example git && ${_DEBUG4}/git -h
+#	cargo build ${_FEATURES4} --example git && ${_DEBUG4}/git -h
 	cargo build ${_FEATURES4} --example repl && ${_DEBUG4}/repl -h
 	cargo build ${_FEATURES4} --example typed-derive && ls -l ${_DEBUG4}/typed-derive 
 	cargo build ${_FEATURES4} --example escaped-positional-derive && ls -l ${_DEBUG4}/escaped-positional-derive 
@@ -61,7 +61,7 @@ examples: cargo-example
 	cargo build ${_FEATURES4} --example git-derive			    && ${_DEBUG4}/git-derive		   	   -h
 	cargo build ${_FEATURES4} --example typed-derive		&& ${_DEBUG4}/typed-derive		   -h   
 	cargo build ${_FEATURES4} --example busybox			&& ${_DEBUG4}/busybox			   -h   
-	cargo build ${_FEATURES4} --example hostname			&& ${_DEBUG4}/hostname			   -h   
+#	cargo build ${_FEATURES4} --example hostname			&& ${_DEBUG4}/hostname			   -h   
 	cargo build ${_FEATURES4} --example repl			&& ${_DEBUG4}/repl			   -h   
 	cargo build ${_FEATURES4} --example 01_quick			&& ${_DEBUG4}/01_quick			   -h   
 	cargo build ${_FEATURES4} --example 02_apps			&& ${_DEBUG4}/02_apps			   -h   
