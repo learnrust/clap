@@ -47,7 +47,7 @@ push:
 	(git commit -a -m "lazy committing message" && git push)
 cargo-example:
 	cargo build ${_FEATURES4} --example cargo-example && ${_DEBUG4}/cargo-example -h
-examples: 
+examples:
 	cargo build ${_FEATURES4} --example cargo-example-derive && ${_DEBUG4}/cargo-example-derive   -h
 	cargo build ${_FEATURES4} --example demo && ${_DEBUG4}/demo        -h
 	cargo build ${_FEATURES4} --example find && ${_DEBUG4}/find        
@@ -103,6 +103,6 @@ examples:
 	cargo build ${_FEATURES4} --example interop_augment_args		    && ${_DEBUG4}/interop_augment_args	      	-h
 	cargo build ${_FEATURES4} --example interop_augment_subcommands	    && ${_DEBUG4}/interop_augment_subcommands    	-h
 	cargo build ${_FEATURES4} --example interop_hand_subcommand		    && ${_DEBUG4}/interop_hand_subcommand	-h      
-	cargo build ${_FEATURES4} --example interop_flatten_hand_args   	    && ${_DEBUG4}/interop_flatten_hand_args     -h 
+	cargo build ${_FEATURES4} --example interop_flatten_hand_args   	    && ${_DEBUG4}/interop_flatten_hand_args     -h
 clean:
 	cargo clean
