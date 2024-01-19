@@ -9,7 +9,9 @@ enum Subcommands {
 }
 
 fn main() {
-    let cli = Command::new("Built CLI");
+    let cli = Command::new("Built CLI")
+    .version("1.0")
+    .help_template("{name} ({version}) - {usage}");
     // Augment with derived subcommands
     let cli = Subcommands::augment_subcommands(cli);
 
