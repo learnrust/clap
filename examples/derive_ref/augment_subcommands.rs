@@ -14,7 +14,7 @@ fn main() {
     .help_template("\
 {before-help}{name} {version}
 {author-with-newline}{about-with-newline}
-{usage-heading} {usage}
+{usage-heading} [Options] [Commands] [Options]
 {all-args}{after-help}
 ");
     // Augment with derived subcommands
@@ -24,5 +24,5 @@ fn main() {
     let derived_subcommands = Subcommands::from_arg_matches(&matches)
         .map_err(|err| err.exit())
         .unwrap();
-    println!("Derived subcommands: {derived_subcommands:#?}");
+    println!("Derived subcommands: {derived_subcommands:#?}\n");
 }
