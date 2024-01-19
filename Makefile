@@ -104,5 +104,7 @@ examples:
 	cargo build ${_FEATURES4} --example interop_augment_subcommands	    && ${_DEBUG4}/interop_augment_subcommands    	-h
 	cargo build ${_FEATURES4} --example interop_hand_subcommand		    && ${_DEBUG4}/interop_hand_subcommand	-h      
 	cargo build ${_FEATURES4} --example interop_flatten_hand_args   	    && ${_DEBUG4}/interop_flatten_hand_args     -h
+sub01:
+	cargo build ${_FEATURES4} --example interop_augment_subcommands	    && ${_DEBUG4}/interop_augment_subcommands    	-h
 clean:
 	cargo clean
