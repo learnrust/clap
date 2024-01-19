@@ -123,7 +123,7 @@ fn subcommand_last() {
 #[test]
 #[cfg(unix)]
 fn register_completion() {
-    common::register_example("static", "exhaustive", completest::Shell::Elvish);
+    common::register_example::<completest_pty::ElvishRuntimeBuilder>("static", "exhaustive");
 }
 
 #[test]
@@ -134,25 +134,27 @@ fn complete() {
     }
 
     let term = completest::Term::new();
-    let mut runtime = common::load_runtime("static", "exhaustive", completest::Shell::Elvish);
+    let mut runtime =
+        common::load_runtime::<completest_pty::ElvishRuntimeBuilder>("static", "exhaustive");
 
     let input = "exhaustive \t";
     let expected = r#"% exhaustive --generate
---generate     generate
---global       everywhere
---help         Print help
---version      Print version
--V             Print version
--h             Print help
-action         action
-alias          alias
-complete       Register shell completions for this program
+ COMPLETING argument  
+--generate     generate                                                 
+--global       everywhere                                               
+--help         Print help                                               
+--version      Print version                                            
+-V             Print version                                            
+-h             Print help                                               
+action         action                                                   
+alias          alias                                                    
+complete       Register shell completions for this program              
 help           Print this message or the help of the given subcommand(s)
-hint           hint
-last           last
-pacman         pacman
-quote          quote
-value          value"#;
+hint           hint                                                     
+last           last                                                     
+pacman         pacman                                                   
+quote          quote                                                    
+value          value                                                    "#;
     let actual = runtime.complete(input, &term).unwrap();
     snapbox::assert_eq(expected, actual);
 }

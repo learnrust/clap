@@ -141,7 +141,7 @@ fn subcommand_last() {
 #[test]
 #[cfg(unix)]
 fn register_completion() {
-    common::register_example("static", "exhaustive", completest::Shell::Bash);
+    common::register_example::<completest_pty::BashRuntimeBuilder>("static", "exhaustive");
 }
 
 #[test]
@@ -152,12 +152,13 @@ fn complete() {
     }
 
     let term = completest::Term::new();
-    let mut runtime = common::load_runtime("static", "exhaustive", completest::Shell::Bash);
+    let mut runtime =
+        common::load_runtime::<completest_pty::BashRuntimeBuilder>("static", "exhaustive");
 
     let input = "exhaustive \t\t";
-    let expected = r#"%
--h          --global    --help      action      value       last        hint        help
--V          --generate  --version   quote       pacman      alias       complete"#;
+    let expected = r#"% 
+-h          --global    --help      action      value       last        hint        help        
+-V          --generate  --version   quote       pacman      alias       complete    "#;
     let actual = runtime.complete(input, &term).unwrap();
     snapbox::assert_eq(expected, actual);
 }
@@ -165,5 +166,5 @@ fn complete() {
 #[test]
 #[cfg(unix)]
 fn register_dynamic_completion() {
-    common::register_example("dynamic", "exhaustive", completest::Shell::Bash);
+    common::register_example::<completest_pty::BashRuntimeBuilder>("dynamic", "exhaustive");
 }

@@ -20,6 +20,41 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+## [4.4.18] - 2024-01-16
+
+### Fixes
+
+- *(error)* When lacking `usage` feature, ensure the list of required arguments is unique
+
+## [4.4.17] - 2024-01-15
+
+### Fixes
+
+- Fix `panic!` when mixing `args_conflicts_with_subcommands` with `ArgGroup` (which is implicit with `derive`) introduced in 4.4.15
+
+## [4.4.16] - 2024-01-12
+
+### Fixes
+
+- Ensure invalid escape sequences in user-defined strings are correctly stripped when terminal doesn't support color
+
+## [4.4.15] - 2024-01-11
+
+### Fixes
+
+- Improve error for `args_conflicts_with_subcommands`
+- Ensure we error for `args_conflicts_with_subcommands` when using subcommand short and long flags
+
+## [4.4.14] - 2024-01-08
+
+### Documentation
+
+- Fix `find` cookbook entry to allow repeats of flags/options
+
+### Features
+
+- Allow `num_args(0)` on options which allows making them emulate being a flag for position-tracking flags
+
 ## [4.4.13] - 2024-01-04
 
 ### Documentation
@@ -4502,7 +4537,12 @@ Minimum version of Rust is now v1.13.0 (Stable)
 * **arg**  allow lifetimes other than 'static in arguments ([9e8c1fb9](https://github.com/clap-rs/clap/commit/9e8c1fb9406f8448873ca58bab07fe905f1551e5))
 
 <!-- next-url -->
-[Unreleased]: https://github.com/clap-rs/clap/compare/v4.4.13...HEAD
+[Unreleased]: https://github.com/clap-rs/clap/compare/v4.4.18...HEAD
+[4.4.18]: https://github.com/clap-rs/clap/compare/v4.4.17...v4.4.18
+[4.4.17]: https://github.com/clap-rs/clap/compare/v4.4.16...v4.4.17
+[4.4.16]: https://github.com/clap-rs/clap/compare/v4.4.15...v4.4.16
+[4.4.15]: https://github.com/clap-rs/clap/compare/v4.4.14...v4.4.15
+[4.4.14]: https://github.com/clap-rs/clap/compare/v4.4.13...v4.4.14
 [4.4.13]: https://github.com/clap-rs/clap/compare/v4.4.12...v4.4.13
 [4.4.12]: https://github.com/clap-rs/clap/compare/v4.4.11...v4.4.12
 [4.4.11]: https://github.com/clap-rs/clap/compare/v4.4.10...v4.4.11
